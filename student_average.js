@@ -22,3 +22,5 @@ let students = [
     let scoreAverage = scoreTotal / scoresLength;
     console.log(`${student.name} ${scoreAverage}` );
    }
+
+ 

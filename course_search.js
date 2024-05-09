@@ -38,21 +38,11 @@ let courses = [
     }
    ];
 
-   courses = getCourseItemInCategory(courses, ""){
-    let matching = [];
-    let CourseItems = courses.length;
-    for(let i = 0; i < CourseItems; i++){
-        if(courses[i].category == ""){
-            matching.push(courses[i]);
-        }
+   let PROG200Course;
+   for(let i = 0; i < courses.length; i++){
+    if(courses[i].CourseId == "PROG200"){
+        PROG200Course = courses[i];
     }
-    return matching;
+    
    }
-
-   let day = getCourseItemInCategory(courses, "11/22/22"){
-    let nameDay = day.length;
-    for(let i = 0; i < nameDay; i++){
-        console.log(day[i].item + "Start time for " +day[i].StartDate);
-    }
-
-   }
+   console.log(PROG200Course.StartDate);
