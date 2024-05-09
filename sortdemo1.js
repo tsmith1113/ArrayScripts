@@ -12,7 +12,7 @@ function compareAscendingNumber(a,b){
 
 let students = ["100","52","11","8300", "nathan", "Natalie", "Brittany", "Zachary", "Tracie", "Julian", "Adama", "Yoseph", "Monse", "Ian", "Zana"];
 
-let numbers = [3, 27, 400,1 ,111, 5];
+let numbers = [3, 27, 400, 1 ,111, 5];
 
 
 console.log("BEFORE");

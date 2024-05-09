@@ -1,5 +1,14 @@
 "use strict";
 
+
+//    {
+//     CourseId: "PROJ500",
+//     Title: "Introduction to Angular",
+//     Location: "Classroom 1",
+//     StartDate: "04/25/23",
+//     Fee: "50.00",
+//     }
+
 let courses = [
     {
     CourseId: "PROG100",
@@ -38,11 +47,48 @@ let courses = [
     }
    ];
 
-   let PROG200Course;
-   for(let i = 0; i < courses.length; i++){
-    if(courses[i].CourseId == "PROG200"){
-        PROG200Course = courses[i];
+
+   function getCourseByCourseId(courses, courseId){
+        for(let i = 0; i < courses.length ; i++){
+        if(courses[i].CourseId == courseId){
+            return courses[i];
+        }
     }
-    
    }
-   console.log(PROG200Course.StartDate);
+
+
+
+
+// When does the PROG200 course start?
+console.log();
+let PROG200Course = getCourseByCourseId(courses, "PROG200");
+console.log(PROG200Course.StartDate);
+
+// What is the title of the PROJ500 course?
+console.log();
+let PROJ500Course = getCourseByCourseId(courses, "PROJ500");
+console.log(PROJ500Course.Title)
+
+
+// What are the titles of the courses that cost $50 or less?
+console.log();
+console.log("courses under $50");
+let coursesUnder50 = [];
+for (let i = 0 ; i < courses.length ; i++){
+    if(courses[i].Fee <= 50){
+        coursesUnder50.push(courses[i].Title);
+    }
+}
+console.log(coursesUnder50);
+// for (let i = 0 ; i < coursesUnder50.length ; i++){
+//     console.log(coursesUnder50[i].Title)
+// }
+
+/////////////////////////////
+console.log();
+console.log("without separate array");
+for (let i = 0 ; i < courses.length ; i++){
+    if(courses[i].Fee <= 50){
+         console.log(courses[i].Title)
+    }
+}
