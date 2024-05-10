@@ -25,15 +25,36 @@ function getProductsItemsInCategory(products, category) {
     }
     return matching;
 }
-
+// Which candies costs less than $4.00?
 let candy = getProductsItemsInCategory(products, "candy");
 let numCandy = candy.length;
-for (let i = 0; i < 4.00; i++) {
+for (let i = 1; i <= 4.00; i++) {
     console.log(candy[i].product + " price is " + candy[i].price.toFixed(2));
 }
 console.log("--------------------------------");
-    candy = getProductsItemsInCategory(products, "M&Ms");
-    let MCandy = M.length;
-    for (let i = 0; i < MCandy; i++) {
-    console.log(M[i].product + " 2 candies " + M[i].product);
-}
+// Which candies has "M&M" its name?
+  console.log("Only list M&Ms");
+  
+  let Ms = [];
+
+  for(let i = 0; i < products.length; i++){
+    let indexOfMandMs = products[i].product.indexOf("M&Ms");
+    if(indexOfMandMs >= 0)
+    Ms.push(products[i].product);
+  }
+// different way to output only M&Ms
+//   for(let i = 0; i < products.length; i++){
+//     if(products[i].product.indexOf("M&Ms") >= 0)
+//     Ms.push(products[i].product);
+//   }
+
+  console.log(Ms);
+
+  console.log("--------------------------------");
+  // Do we carry "Swedish Fish"?
+    let message;
+  if(candy == "Swedish Fish"){
+    message = "Yes";
+  }else{
+    message = "We do not have Swedish Fish";
+  }

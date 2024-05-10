@@ -38,13 +38,28 @@ let courses = [
     }
    ];
 
-
-   function getCourseByCourseTitle(courses, Title){
-        for(let i = 0; i < courses.length ; i++){
-        if(courses[i].CourseTitle == Title){
-            return courses[i];
+    function compareCourses(a,b){
+        if(a.Title < b.Title){
+            return -1;
         }
+       else if(a.Title == b.Title){
+        return 0;
+       }
+       return 1;     
     }
+   
+   for(let i = 0; i < courses.length; i++){
+    console.log(courses[i].Title);
    }
-    console.log(Title);
-    Title.sort();
+   
+    courses.sort(compareCourses);
+
+    
+
+
+
+
+    console.log("--------------------------");
+    for(let i = 0; i < courses.length; i++){
+        console.log(courses[i].Title);
+       }
