@@ -52,9 +52,12 @@ console.log("--------------------------------");
 
   console.log("--------------------------------");
   // Do we carry "Swedish Fish"?
+  console.log("Do we have Swedish Fish?: ");
     let message;
-  if(candy == "Swedish Fish"){
-    message = "Yes";
+    let foundSwedishFissh = (product => product.product =="Swedish Fish");
+  if(foundSwedishFissh){
+    message = "Yes, we have Swedish Fish.";
   }else{
     message = "We do not have Swedish Fish";
   }
+ console.log(message);
